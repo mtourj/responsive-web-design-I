@@ -346,6 +346,7 @@ textarea {
 @media (max-width: 800px){
     body {
         min-width: 500px;
+        width: 90%;
     }
 
     #headerImage {
@@ -361,6 +362,28 @@ textarea {
     .middle-img-section {
         display: inline;
     }
+    
+    .card h1 {
+        font-size: 32px;
+    }
+
+    section.services-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.services-bottom article {
+        width: 95%;
+    }
+
+    .section.services-bottom section {
+        display: inline-block;
+    }
+
+    .services-info-img {
+        width: 95%;
+        height: 95%;
+    }
 
     .logo.top {
         display: flex;
@@ -375,7 +398,7 @@ textarea {
     body {
         margin-top: 500px;
         min-width: 200px;
-        width: 100%;
+        width: 95%;
     }
 
     #title {
@@ -418,6 +441,20 @@ textarea {
     section {
         flex-direction: column;
         align-items: center;
+    }
+
+    .cardRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .services-info-img {
+        width: 95%;
+        height: auto;
     }
 
     .bottomSection {
