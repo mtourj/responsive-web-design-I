@@ -80,10 +80,11 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 body {
-	min-width: 960px;
+	min-width: 850px;
 	margin: auto;
 	width: 50%;
-	display: block;
+    display: flex;
+    flex-direction: column;
 	margin-top: 100px;
 }
 
@@ -99,16 +100,29 @@ li {
 .navbackground {
 	top: 0;
 	position: fixed;
-	height: 80px;
+	height: auto;
 	right: 0;
 	left: 0;
-	background: #B2B2B4;
+    background: #B2B2B4;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo.top {
+    margin-top: 10px;
+    justify-content: center;
+    display: none;
+}
+
+.logo.nav {
+    display: flex;
 }
 
 nav {
 	display: flex;
 	margin: auto;
-	overflow: hidden;
+    overflow: hidden;
+    justify-content: center;
 	padding: 10px 0px;
 	width: 50%;
 	min-width: 800px;
@@ -132,8 +146,18 @@ nav img {
 	text-align: right;
 }
 
+nav hr {
+    display: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
 hr {
-	border: 0.5px solid black;
+    border: 0.5px solid black;
+    width: 100%;
 }
 
 #bulbimg {
@@ -186,26 +210,6 @@ footer {
 	width : 100%;
 }
 
-.middle-img {
-	width: 100%;
-}
-
-#title {
-	vertical-align: top;
-	width: 49%;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	flex-grow: 1;
-	justify-content: center;
-	padding: 20px;
-	margin-top: 5%;
-	font-family: 'Rubik Mono One', sans-serif;
-	letter-spacing: 1px;
-	margin-bottom: 15px;
-	font-size: 72px;
-}
-
 p {
 	margin-right: 5px;
 	margin-bottom: 10px;
@@ -218,9 +222,30 @@ section {
 	margin: 25px 0;
 }
 
+.middle-img {
+    width: 100%;
+    height: auto;
+}
+
 .titleSection {
 	display: flex;
 	align-content: space-evenly;
+}
+
+#title {
+	vertical-align: top;
+	width: 49%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+    flex-grow: 1;
+	justify-content: center;
+	padding: 20px;
+	margin-top: 5%;
+	font-family: 'Rubik Mono One', sans-serif;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+	font-size: 72px;
 }
 
 .bottomSection {
@@ -316,4 +341,88 @@ textarea {
 #contactInfo {
 	text-align: center;
 	align-content: center;
+}
+
+@media (max-width: 800px){
+    body {
+        min-width: 500px;
+    }
+
+    #headerImage {
+        display: none;
+    }
+
+    nav {
+        min-width: 500px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .middle-img-section {
+        display: inline;
+    }
+
+    .logo.top {
+        display: flex;
+    }
+
+    .logo.nav {
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    body {
+        margin-top: 500px;
+        min-width: 200px;
+        width: 100%;
+    }
+
+    #title {
+        font-size: 48px;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .middle-img-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-img {
+        width: 90%;
+    }
+
+    article {
+        width: 90%;
+    }
+
+    .navbackground {
+        position: absolute;
+    }
+
+    nav {
+        min-width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav hr {
+        display: flex;
+        border: .5px solid black;
+        width: 75%;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottomSection {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
 }
